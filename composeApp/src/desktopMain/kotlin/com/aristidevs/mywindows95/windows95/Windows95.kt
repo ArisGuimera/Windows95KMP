@@ -93,7 +93,9 @@ fun Windows95Screen() {
             }
             RightClickMenu(showMenu = showRightClickMenu,
                 position = rightClickPosition,
-                onDismissRequest = { showRightClickMenu = false })
+                onDismissRequest = { showRightClickMenu = false },
+                createNewFolder = {}
+            )
         }
         WindowsBar(windows = windows, onClickMinimizedWindow = { window ->
             windows =

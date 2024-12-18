@@ -3,32 +3,39 @@ package com.aristidevs.mywindows95.components
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.ExitTransition
 import androidx.compose.animation.fadeIn
-import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.geometry.Offset
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.IntOffset
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Popup
 import com.aristidevs.mywindows95.components.rightmenu.MenuDivider
 import com.aristidevs.mywindows95.components.rightmenu.MenuItem
 import com.aristidevs.mywindows95.components.rightmenu.SubMenu
+import com.aristidevs.mywindows95.model.SubMenuItem
 
 @Composable
-fun RightClickMenu(showMenu: Boolean, position: IntOffset, onDismissRequest: () -> Unit) {
+fun RightClickMenu(
+    showMenu: Boolean,
+    position: IntOffset,
+    onDismissRequest: () -> Unit,
+    createNewFolder: (IntOffset) -> Unit
+) {
 
     var subMenuPosition: IntOffset? by remember { mutableStateOf(null) }
+    var subMenuItems: List<SubMenuItem> by remember { mutableStateOf(emptyList()) }
+
+    LaunchedEffect(position) {
+        subMenuPosition = null
+    }
 
     AnimatedVisibility(showMenu, exit = ExitTransition.None, enter = fadeIn()) {
         Popup(
@@ -39,6 +46,12 @@ fun RightClickMenu(showMenu: Boolean, position: IntOffset, onDismissRequest: () 
             BackgroundComponent(Modifier.width(170.dp)) {
                 Column(Modifier.padding(3.dp)) {
                     MenuItem(text = "Arrange Icons", showSubMenu = true, hovered = {
+                        subMenuItems = listOf(
+                            SubMenuItem("By name", onClick = {}),
+                            SubMenuItem("By size", onClick = {}),
+                            SubMenuItem("By type", onClick = {}),
+                            SubMenuItem("By date", onClick = {}),
+                        )
                         subMenuPosition = IntOffset(position.x + 170, position.y)
                     })
                     MenuItem(text = "Line up Icons", hovered = { subMenuPosition = null })
@@ -50,6 +63,12 @@ fun RightClickMenu(showMenu: Boolean, position: IntOffset, onDismissRequest: () 
                     MenuItem(text = "Undo Copy", hovered = { subMenuPosition = null })
                     MenuDivider()
                     MenuItem(text = "New", showSubMenu = true, hovered = {
+                        subMenuItems = listOf(
+                            SubMenuItem("Folder", onClick = { createNewFolder(position) }),
+                            SubMenuItem("Shortcut", onClick = {}, enabled = false),
+                            SubMenuItem("Text Document", onClick = {}, enabled = false),
+                            SubMenuItem("Bitmap Image", onClick = {}, enabled = false),
+                        )
                         subMenuPosition = IntOffset(position.x + 170, position.y)
                     })
                     MenuDivider()
@@ -66,7 +85,7 @@ fun RightClickMenu(showMenu: Boolean, position: IntOffset, onDismissRequest: () 
                 onDismissRequest = { onDismissRequest() },
                 alignment = Alignment.TopStart
             ) {
-                SubMenu()
+                SubMenu(subMenuItems)
             }
         }
     }
