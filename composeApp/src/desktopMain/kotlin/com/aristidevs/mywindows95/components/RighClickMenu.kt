@@ -69,7 +69,8 @@ fun RightClickMenu(
                             SubMenuItem("Text Document", onClick = {}, enabled = false),
                             SubMenuItem("Bitmap Image", onClick = {}, enabled = false),
                         )
-                        subMenuPosition = IntOffset(position.x + 170, position.y)
+                        val extraY: Int = it?.y?.toInt() ?: 0
+                        subMenuPosition = IntOffset(position.x + 170, position.y + extraY)
                     })
                     MenuDivider()
                     MenuItem(text = "Properties", onClick = {

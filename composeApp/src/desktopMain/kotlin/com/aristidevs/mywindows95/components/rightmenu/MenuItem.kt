@@ -24,6 +24,7 @@ import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.onGloballyPositioned
 import androidx.compose.ui.layout.positionInParent
+import androidx.compose.ui.layout.positionInRoot
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -40,7 +41,7 @@ fun MenuItem(
     text: String,
     enabled: Boolean = true,
     showSubMenu: Boolean = false,
-    hovered: () -> Unit,
+    hovered: (Offset?) -> Unit,
     onClick: () -> Unit = {}
 ) {
 
@@ -49,9 +50,11 @@ fun MenuItem(
     val background = if (isHovered && enabled) windowsBlue else backgroundComponent
     val textColor = if (isHovered) Color.White else Color.Black
 
+    var subMenuPosition by remember { mutableStateOf(Offset(0f, 0f)) }
+
     LaunchedEffect(isHovered) {
         if (isHovered) {
-            hovered()
+            hovered(subMenuPosition)
         }
     }
 
@@ -60,6 +63,11 @@ fun MenuItem(
             if (enabled) {
                 onClick()
             }
+        }.onGloballyPositioned { layoutCoordinates ->
+            val position = layoutCoordinates.positionInParent()
+            subMenuPosition = Offset(
+                x = position.x + layoutCoordinates.size.width.toFloat() + 10, y = position.y
+            )
         }) {
         Spacer(Modifier.width(20.dp))
         Text(

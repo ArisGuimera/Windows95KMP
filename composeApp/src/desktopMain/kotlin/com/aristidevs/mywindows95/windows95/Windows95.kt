@@ -94,8 +94,13 @@ fun Windows95Screen() {
             RightClickMenu(showMenu = showRightClickMenu,
                 position = rightClickPosition,
                 onDismissRequest = { showRightClickMenu = false },
-                createNewFolder = {}
-            )
+                createNewFolder = {
+                    val newFolder = FolderModel(
+                        id = folders.size + 1, position = Offset(it.x.toFloat(), it.y.toFloat())
+                    )
+                    folders = folders + newFolder
+                    showRightClickMenu = false
+                })
         }
         WindowsBar(windows = windows, onClickMinimizedWindow = { window ->
             windows =
