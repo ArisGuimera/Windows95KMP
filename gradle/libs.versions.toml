@@ -4,6 +4,7 @@ compose-multiplatform = "1.7.0"
 junit = "4.13.2"
 kotlin = "2.0.21"
 kotlinx-coroutines = "1.9.0"
+datetime = "0.6.1"
 
 [libraries]
 kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
@@ -12,6 +13,7 @@ junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-lifecycle-viewmodel = { group = "org.jetbrains.androidx.lifecycle", name = "lifecycle-viewmodel", version.ref = "androidx-lifecycle" }
 androidx-lifecycle-runtime-compose = { group = "org.jetbrains.androidx.lifecycle", name = "lifecycle-runtime-compose", version.ref = "androidx-lifecycle" }
 kotlinx-coroutines-swing = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-swing", version.ref = "kotlinx-coroutines" }
+kotlin-datetime = {group = "org.jetbrains.kotlinx", name= "kotlinx-datetime", version.ref = "datetime" }
 
 [plugins]
 composeMultiplatform = { id = "org.jetbrains.compose", version.ref = "compose-multiplatform" }

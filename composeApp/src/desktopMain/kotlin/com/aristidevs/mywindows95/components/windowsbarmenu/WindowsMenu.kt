@@ -18,6 +18,8 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.aristidevs.mywindows95.components.BackgroundComponent
 import com.aristidevs.mywindows95.extensions.rotateVertically
+import com.aristidevs.mywindows95.model.WindowsMenuCategory
+import com.aristidevs.mywindows95.model.WindowsMenuCategory.*
 import com.aristidevs.mywindows95.ui.backgroundComponent
 import com.aristidevs.mywindows95.ui.windowsBarTextBackground
 import org.jetbrains.compose.resources.painterResource
@@ -31,7 +33,7 @@ import windows95.composeapp.generated.resources.ic_settings
 import windows95.composeapp.generated.resources.ic_shutdown
 
 @Composable
-fun WindowsMenu(showSubMenu: (Float?) -> Unit) {
+fun WindowsMenu(showSubMenu: (Float?, WindowsMenuCategory?) -> Unit) {
     BackgroundComponent(Modifier.height(350.dp)) {
         Column {
             Row {
@@ -54,32 +56,32 @@ fun WindowsMenu(showSubMenu: (Float?) -> Unit) {
                         text = "Programs",
                         painter = painterResource(Res.drawable.ic_programs),
                         expandable = true
-                    ) { showSubMenu(it) }
+                    ) { showSubMenu(it, Programs) }
                     WindowsMenuItem(
                         text = "Documents",
                         painter = painterResource(Res.drawable.ic_documents),
                         expandable = true
-                    ) { showSubMenu(it) }
+                    ) { showSubMenu(it, Documents) }
                     WindowsMenuItem(
                         text = "Settings",
                         painter = painterResource(Res.drawable.ic_settings),
                         expandable = true
-                    ) { showSubMenu(it) }
+                    ) { showSubMenu(it, Settings) }
                     WindowsMenuItem(
                         text = "Find",
                         painter = painterResource(Res.drawable.ic_find),
                         expandable = true
-                    ) { showSubMenu(it) }
+                    ) { showSubMenu(it, Find) }
                     WindowsMenuItem(
                         text = "Help", painter = painterResource(Res.drawable.ic_help)
-                    ) { showSubMenu(it) }
+                    ) { showSubMenu(it, null) }
                     WindowsMenuItem(
                         text = "Run...", painter = painterResource(Res.drawable.ic_run)
-                    ) { showSubMenu(it) }
+                    ) { showSubMenu(it, null) }
                     //DIVIDER
                     WindowsMenuItem(
                         text = "Shut Down...", painter = painterResource(Res.drawable.ic_shutdown)
-                    ) { showSubMenu(it) }
+                    ) { showSubMenu(it, null) }
                 }
             }
         }

@@ -20,6 +20,7 @@ import com.aristidevs.mywindows95.components.windowsbarmenu.WindowsBarMenuScreen
 import com.aristidevs.mywindows95.extensions.clickableWithoutRipple
 import com.aristidevs.mywindows95.extensions.onRightClick
 import com.aristidevs.mywindows95.model.FolderModel
+import com.aristidevs.mywindows95.model.FolderSortType
 import com.aristidevs.mywindows95.model.WindowModel
 
 @Composable
@@ -100,6 +101,20 @@ fun Windows95Screen() {
                     )
                     folders = folders + newFolder
                     showRightClickMenu = false
+                },
+                sortFolders = { sortType ->
+                    showRightClickMenu = false
+                    folders = when(sortType){
+                        FolderSortType.ByName -> folders.sortedBy { it.name }
+                        FolderSortType.ByDate -> folders.sortedByDescending { it.createdDate }
+                    }.mapIndexed { pos: Int, folder: FolderModel ->
+                            folder.copy(
+                                position = Offset(
+                                    y = (pos * 75).toFloat(),
+                                    x = 0f
+                                )
+                            )
+                        }
                 })
         }
         WindowsBar(windows = windows, onClickMinimizedWindow = { window ->

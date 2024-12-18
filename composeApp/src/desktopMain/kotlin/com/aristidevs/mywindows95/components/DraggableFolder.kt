@@ -7,6 +7,8 @@ import androidx.compose.foundation.gestures.detectTransformGestures
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.size
@@ -54,6 +56,10 @@ fun DraggableFolder(
     var lastClickTime by remember { mutableStateOf(0L) }
 
     val focusRequester = remember { FocusRequester() }
+
+    LaunchedEffect(folderModel){
+        offset = folderModel.position
+    }
 
     Box(Modifier.offset(x = folderModel.position.x.dp, y = folderModel.position.y.dp).size(75.dp)
         .pointerInput(Unit) {
@@ -116,6 +122,9 @@ fun DraggableFolder(
                     color = textColor,
                     modifier = Modifier.background(if (folderModel.selected) windowsBlue else Color.Transparent)
                 )
+            }
+            Row {
+                Spacer(Modifier.weight(1f))
             }
         }
         if(isEditing){
