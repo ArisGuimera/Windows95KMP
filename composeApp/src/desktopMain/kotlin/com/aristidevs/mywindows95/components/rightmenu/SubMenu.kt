@@ -12,9 +12,8 @@ import androidx.compose.ui.unit.dp
 import com.aristidevs.mywindows95.components.BackgroundComponent
 
 @Composable
-fun SubMenu(offset: Offset) {
-    BackgroundComponent(Modifier.width(170.dp)
-        .offset { IntOffset(offset.x.toInt(), offset.y.toInt()) }) {
+fun SubMenu() {
+    BackgroundComponent(Modifier.width(170.dp)) {
         Column(Modifier.padding(3.dp)) {
             MenuItem(text = "Line up Icons", hovered = { })
             MenuItem(text = "Line up Icons", hovered = { })

@@ -40,7 +40,7 @@ fun MenuItem(
     text: String,
     enabled: Boolean = true,
     showSubMenu: Boolean = false,
-    hovered: (Offset?) -> Unit,
+    hovered: () -> Unit,
     onClick: () -> Unit = {}
 ) {
 
@@ -49,11 +49,9 @@ fun MenuItem(
     val background = if (isHovered && enabled) windowsBlue else backgroundComponent
     val textColor = if (isHovered) Color.White else Color.Black
 
-    var subMenuPosition by remember { mutableStateOf(Offset(0f, 0f)) }
-
     LaunchedEffect(isHovered) {
         if (isHovered) {
-            hovered(subMenuPosition)
+            hovered()
         }
     }
 
@@ -62,10 +60,6 @@ fun MenuItem(
             if (enabled) {
                 onClick()
             }
-        }.onGloballyPositioned { layoutCoordinates ->
-            val position = layoutCoordinates.positionInParent()
-            subMenuPosition =
-                Offset(x = position.x + layoutCoordinates.size.width.toFloat() + 10, y = position.y)
         }) {
         Spacer(Modifier.width(20.dp))
         Text(
@@ -78,39 +72,9 @@ fun MenuItem(
             Icon(
                 modifier = Modifier.padding(horizontal = 4.dp).size(12.dp),
                 painter = painterResource(Res.drawable.ic_arrow),
-                tint = Color.Black,
+                tint = textColor,
                 contentDescription = "arrow"
             )
         }
-    }
-}
-
-
-
-@Composable
-fun SubMenuItem(
-    text: String,
-    enabled: Boolean = true,
-    onClick: () -> Unit = {}
-) {
-
-    val interactionSource = remember { MutableInteractionSource() }
-    val isHovered by interactionSource.collectIsHoveredAsState()
-    val background = if (isHovered && enabled) windowsBlue else backgroundComponent
-    val textColor = if (isHovered) Color.White else Color.Black
-
-    Row(Modifier.hoverable(interactionSource).fillMaxWidth().padding(4.dp).background(background)
-        .padding(4.dp).clickableWithoutRipple {
-            if (enabled) {
-                onClick()
-            }
-        }) {
-        Spacer(Modifier.width(20.dp))
-        Text(
-            text,
-            color = textColor,
-            style = TextStyle(lineHeight = 0.sp)
-        )
-        Spacer(Modifier.weight(1f))
     }
 }

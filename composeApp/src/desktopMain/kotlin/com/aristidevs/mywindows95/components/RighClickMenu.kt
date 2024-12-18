@@ -28,7 +28,7 @@ import com.aristidevs.mywindows95.components.rightmenu.SubMenu
 @Composable
 fun RightClickMenu(showMenu: Boolean, position: IntOffset, onDismissRequest: () -> Unit) {
 
-    var subMenuPosition: Offset? by remember { mutableStateOf(null) }
+    var subMenuPosition: IntOffset? by remember { mutableStateOf(null) }
 
     AnimatedVisibility(showMenu, exit = ExitTransition.None, enter = fadeIn()) {
         Popup(
@@ -38,8 +38,8 @@ fun RightClickMenu(showMenu: Boolean, position: IntOffset, onDismissRequest: () 
         ) {
             BackgroundComponent(Modifier.width(170.dp)) {
                 Column(Modifier.padding(3.dp)) {
-                    MenuItem(text = "Arrange Icons", showSubMenu = true, hovered = { position ->
-                        subMenuPosition = position
+                    MenuItem(text = "Arrange Icons", showSubMenu = true, hovered = {
+                        subMenuPosition = IntOffset(position.x + 170, position.y)
                     })
                     MenuItem(text = "Line up Icons", hovered = { subMenuPosition = null })
                     MenuDivider()
@@ -49,8 +49,8 @@ fun RightClickMenu(showMenu: Boolean, position: IntOffset, onDismissRequest: () 
                         hovered = { subMenuPosition = null })
                     MenuItem(text = "Undo Copy", hovered = { subMenuPosition = null })
                     MenuDivider()
-                    MenuItem(text = "New", showSubMenu = true, hovered = { position ->
-                        subMenuPosition = position
+                    MenuItem(text = "New", showSubMenu = true, hovered = {
+                        subMenuPosition = IntOffset(position.x + 170, position.y)
                     })
                     MenuDivider()
                     MenuItem(text = "Properties", onClick = {
@@ -59,8 +59,14 @@ fun RightClickMenu(showMenu: Boolean, position: IntOffset, onDismissRequest: () 
                     }, hovered = { subMenuPosition = null })
                 }
             }
-            subMenuPosition?.let {
-                SubMenu(offset = it)
+        }
+        subMenuPosition?.let {
+            Popup(
+                offset = it,
+                onDismissRequest = { onDismissRequest() },
+                alignment = Alignment.TopStart
+            ) {
+                SubMenu()
             }
         }
     }
