@@ -1,5 +1,6 @@
 package com.aristidevs.mywindows95.components
 
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Row
@@ -16,6 +17,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Color.Companion.White
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.unit.dp
 import com.aristidevs.mywindows95.ui.backgroundComponent
 import com.aristidevs.mywindows95.ui.disabledTextColor
@@ -24,6 +26,8 @@ import org.jetbrains.compose.resources.painterResource
 import windows95.composeapp.generated.resources.Res
 import windows95.composeapp.generated.resources.ic_close
 import windows95.composeapp.generated.resources.ic_expand
+import windows95.composeapp.generated.resources.ic_folder
+import windows95.composeapp.generated.resources.ic_folder_open
 import windows95.composeapp.generated.resources.ic_minimize
 
 @Composable
@@ -39,7 +43,16 @@ fun WindowToolbar(
     val textColor = if (selected) White else disabledTextColor
     val backgroundColor = if (selected) windowsBlue else backgroundComponent
 
-    Row(modifier.fillMaxWidth().height(24.dp).background(backgroundColor), verticalAlignment = Alignment.CenterVertically) {
+    Row(
+        modifier.fillMaxWidth().height(24.dp).background(backgroundColor),
+        verticalAlignment = Alignment.CenterVertically
+    ) {
+        Spacer(Modifier.width(1.dp))
+        Image(
+            painter = painterResource(Res.drawable.ic_folder_open),
+            contentDescription = null,
+            modifier = Modifier.size(19.dp)
+        )
         Spacer(Modifier.width(4.dp))
         Text(title, color = textColor)
         Spacer(Modifier.weight(1f))

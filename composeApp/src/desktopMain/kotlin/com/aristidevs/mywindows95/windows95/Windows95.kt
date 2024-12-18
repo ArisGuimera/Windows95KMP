@@ -19,6 +19,7 @@ import com.aristidevs.mywindows95.components.windowsbarmenu.WindowsBar
 import com.aristidevs.mywindows95.components.windowsbarmenu.WindowsBarMenuScreen
 import com.aristidevs.mywindows95.extensions.clickableWithoutRipple
 import com.aristidevs.mywindows95.extensions.onRightClick
+import com.aristidevs.mywindows95.helper.DefaultFoldersProvider
 import com.aristidevs.mywindows95.model.FolderModel
 import com.aristidevs.mywindows95.model.FolderSortType
 import com.aristidevs.mywindows95.model.WindowModel
@@ -26,9 +27,7 @@ import com.aristidevs.mywindows95.model.WindowModel
 @Composable
 fun Windows95Screen() {
     var showWindowsMenu by remember { mutableStateOf(false) }
-    val fakeFolder = FolderModel(0, "AristiDevs", Offset(x = 0f, y = 0f))
-    val fakeFolder2 = FolderModel(1, "Pepe", Offset(x = 0f, y = 60f))
-    var folders by remember { mutableStateOf(listOf<FolderModel>(fakeFolder, fakeFolder2)) }
+    var folders by remember { mutableStateOf(DefaultFoldersProvider.default) }
     var windows by remember { mutableStateOf(listOf<WindowModel>()) }
 
     var showRightClickMenu by remember { mutableStateOf(false) }
