@@ -9,16 +9,16 @@ Este proyecto es una implementación con Kotlin Multiplatform (KMP) del icónico
 
 Temario: 
 <br />
-- [Capítulo 1 - Configuración del proyecto]()
-- [Capítulo 2 - Preparando el Splash]()
-- [Capítulo 3 - Tipografía]()
-- [Capítulo 4 - Windows Bar]()
-- [Capítulo 5 - Menú inferior]()
-- [Capítulo 6 - Carpetas]()
-- [Capítulo 7 - Ventanas]()
-- [Capítulo 8 - PopUp]()
-- [Capítulo 9 - Ordenar carpetas]()
-- [Capítulo 10 - Retoques finales]()
+- [Capítulo 1 - Configuración del proyecto](https://www.youtube.com/watch?v=QFPTUwFW9p8&t=160s)
+- [Capítulo 2 - Preparando el Splash](https://www.youtube.com/watch?v=QFPTUwFW9p8&t=545s)
+- [Capítulo 3 - Tipografía](https://www.youtube.com/watch?v=QFPTUwFW9p8&t=1585s)
+- [Capítulo 4 - Windows Bar](https://www.youtube.com/watch?v=QFPTUwFW9p8&t=1865s)
+- [Capítulo 5 - Menú inferior](https://www.youtube.com/watch?v=QFPTUwFW9p8&t=4354s)
+- [Capítulo 6 - Carpetas](https://www.youtube.com/watch?v=QFPTUwFW9p8&t=7936s)
+- [Capítulo 7 - Ventanas](https://www.youtube.com/watch?v=QFPTUwFW9p8&t=10250s)
+- [Capítulo 8 - PopUp](https://www.youtube.com/watch?v=QFPTUwFW9p8&t=15252s)
+- [Capítulo 9 - Ordenar carpetas](https://www.youtube.com/watch?v=QFPTUwFW9p8&t=18706s)
+- [Capítulo 10 - Retoques finales](https://www.youtube.com/watch?v=QFPTUwFW9p8&t=19566s)
 
 
 ----------
