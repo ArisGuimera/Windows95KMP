@@ -10,7 +10,7 @@ fun main() = application {
     val state = rememberWindowState(
         width = 1200.dp,
         height = 900.dp,
-        placement = WindowPlacement.Maximized
+//        placement = WindowPlacement.Maximized
     )
     Window(
         onCloseRequest = ::exitApplication,
