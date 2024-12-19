@@ -1,7 +1,7 @@
 # Curso Kotlin Multiplatform - Windows 95
 
 Este proyecto es una implementación con Kotlin Multiplatform (KMP) del icónico sistema de menús de clic derecho de Windows 95. Combina prácticas modernas de desarrollo con una interfaz nostálgica.
-<p align="center"> <img src="https://img.shields.io/badge/Kotlin-7F52FF?style=for-the-badge&logo=Kotlin&logoColor=white" alt="Kotlin">  <img src="https://img.shields.io/badge/Kotlin-Multiplatform-%237f52ff?style=for-the-badge&logo=kotlin"> <img src="https://img.shields.io/badge/Windows%2095-%F0%9F%96%BC-lightgrey" alt="Windows 95"> </p>
+<p align="center"> <img src="https://img.shields.io/badge/Kotlin-7F52FF?style=for-the-badge&logo=Kotlin&logoColor=white" alt="Kotlin">  <img src="https://img.shields.io/badge/Kotlin-Multiplatform-%237f52ff?style=for-the-badge&logo=kotlin"> <img src="https://img.shields.io/badge/Windows%2095-%F0%9F%96%BC-lightgrey?style=for-the-badge" alt="Windows 95"> </p>
 
 ----------
 
