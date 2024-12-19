@@ -21,7 +21,7 @@ import org.jetbrains.compose.ui.tooling.preview.Preview
 @Preview
 fun App() {
     MaterialTheme(typography = Windows95Typography()) {
-        var initializing: Boolean by remember { mutableStateOf(false) }
+        var initializing: Boolean by remember { mutableStateOf(true) }
 
         Box(Modifier.fillMaxSize().background(background)) {
             if (initializing) {
