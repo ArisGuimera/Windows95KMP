@@ -2,14 +2,24 @@
 
 Este proyecto es una implementación con Kotlin Multiplatform (KMP) del icónico sistema de menús de clic derecho de Windows 95. Combina prácticas modernas de desarrollo con una interfaz nostálgica.
 <p align="center"> <img src="https://img.shields.io/badge/Kotlin-7F52FF?style=for-the-badge&logo=Kotlin&logoColor=white" alt="Kotlin">  <img src="https://img.shields.io/badge/Kotlin-Multiplatform-%237f52ff?style=for-the-badge&logo=kotlin"> <img src="https://img.shields.io/badge/Windows%2095-%F0%9F%96%BC-lightgrey" alt="Windows 95"> </p>
+
 ----------
 
-## 🚀 Características
+## Aprende a PROGRAMAR aplicaciones en Kotlin Multiplataforma.
 
--   **Compatibilidad Multiplataforma**: Funciona en Android, iOS, Desktop y Web.
--   **Diseño Auténtico**: Recreación fiel del menú de Windows 95.
--   **Opciones Personalizables**: Adapta los elementos del menú y sus acciones con facilidad.
--   **Rendimiento Óptimo**: Ligero y eficiente en todas las plataformas soportadas.
+Temario: 
+<br />
+- [Capítulo 1 - Configuración del proyecto]()
+- [Capítulo 2 - Preparando el Splash]()
+- [Capítulo 3 - Tipografía]()
+- [Capítulo 4 - Windows Bar]()
+- [Capítulo 5 - Menú inferior]()
+- [Capítulo 6 - Carpetas]()
+- [Capítulo 7 - Ventanas]()
+- [Capítulo 8 - PopUp]()
+- [Capítulo 9 - Ordenar carpetas]()
+- [Capítulo 10 - Retoques finales]()
+
 
 ----------
 
@@ -38,24 +48,71 @@ Este proyecto es una implementación con Kotlin Multiplatform (KMP) del icónico
 
 |                               Pantalla principal                               | 
 |:------------------------------------------------------------------------------:|
-|  <img src="https://i.imgur.com/F6rSzsI.png" style="height: 30%; width:50%;"/>  | 
+|  <img src="img/win95-1.png" style="height: 50%; width:70%;"/>  | 
+
+|                               Menú inferior                               | 
+|:------------------------------------------------------------------------------:|
+|  <img src="img/win95-2.png" style="height: 50%; width:70%;"/>  | 
+
+|                               Click derecho                               | 
+|:------------------------------------------------------------------------------:|
+|  <img src="img/win95-3.png" style="height: 50%; width:70%;"/>  | 
 
 ----------
 
-## ✏️ Personalización
+## ✏️ Estructura del proyecto
 
 ### Componentes
 
-Puedes personalizar las opciones del menú editando el objeto `MenuConfig` en el módulo compartido:
+Puedes acceder a `ComposeApp/src/desktopMain/kotlin/com/aristidevs/myWindows95/components` para acceder a todos los componentes que se han ido creando durante el curso. Se han programado lo más genéricos posibles para poder personalizarlos y reutilizarlos en cualquier lugar. Por ejemplo **WindowsButton**
 
 ```kotlin
-val MenuConfig = listOf(
-    MenuItem("Abrir"),
-    MenuItem("Propiedades"),
-    MenuItem("Eliminar")
-)
+WindowsButton(){
+    Text("Ejemplo básico")
+}
+
+WindowsButton(Modifier.height(60.dp), onClick = {print("Example"}, dotPadding = 6.dp)){
+    //Cualquier vista
+}
 
 ```
+
+### Helpers
+
+Desde `ComposeApp/src/desktopMain/kotlin/com/aristidevs/myWindows95/helper` dispones del `SoundManager`, el encargado de reproducir la música del splash.
+
+### Extensions
+
+En `ComposeApp/src/desktopMain/kotlin/com/aristidevs/myWindows95/extensions` tendrás todas las funciones de extensión generadas para el proyecto. 
+
+```kotlin
+
+Modifier.onRightClick {}
+
+Modifier.clickableWithoutRipple {}
+
+Modifier.rotateVertically()
+
+//Entre otras
+
+```
+
+### Model
+
+Todos los modelos de datos se encuentran en `ComposeApp/src/desktopMain/kotlin/com/aristidevs/myWindows95/model`.
+
+### Model
+
+Todos los modelos de datos se encuentran en `ComposeApp/src/desktopMain/kotlin/com/aristidevs/myWindows95/model`.
+
+### Splash Screen
+
+Primera vista del proyecto que se lanzará siempre que se ejecute la app. `ComposeApp/src/desktopMain/kotlin/com/aristidevs/myWindows95/splash/`.
+
+### Windows 95
+
+Vista principal del proyecto `ComposeApp/src/desktopMain/kotlin/com/aristidevs/myWindows95/windows95`.
+
 
 ## 🌍 Plataformas Soportadas
 
@@ -90,6 +147,8 @@ Desarrollado por **AristiDevs**.
 ## 🚀 AppCademy.dev
 
 
+<p align="center">
+<a href="https://appcademy.dev"><img src="img/appcademy.webp" style="height: 35%; width:35%;"/></center></a></p>
 
 Este curso está patrocinado por [AppCademy.dev](https://appcademy.dev) mi plataforma de cursos premium donde no solo aprendemos tecnologías sino que profundizamos en sus desarrollos a través de buenas prácticas y contenido avanzado.
 
