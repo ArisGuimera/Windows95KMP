@@ -1,3 +1,5 @@
+> [!NOTE]  
+> 🌐 Este README también está disponible en [Español](README.md).
 
 # Kotlin Multiplatform Course - Windows 95
 
@@ -15,7 +17,7 @@ This project is a Kotlin Multiplatform (KMP) implementation of the iconic Window
 ### Course Content:
 <br />
 
-- [Chapter 1 - Project Setup] (https://www.youtube.com/watch?v=QFPTUwFW9p8&t=160s)
+- [Chapter 1 - Project Setup](https://www.youtube.com/watch?v=QFPTUwFW9p8&t=160s)
 - [Chapter 2 - Preparing the Splash](https://www.youtube.com/watch?v=QFPTUwFW9p8&t=545s)
 - [Chapter 3 - Typography](https://www.youtube.com/watch?v=QFPTUwFW9p8&t=1585s)
 - [Chapter 4 - Windows Bar](https://www.youtube.com/watch?v=QFPTUwFW9p8&t=1865s)
