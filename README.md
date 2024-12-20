@@ -1,3 +1,6 @@
+> [!NOTE]  
+> 🌐 This README is also available in [English](README.en.md).
+
 # Curso Kotlin Multiplatform - Windows 95
 
 Este proyecto es una implementación con Kotlin Multiplatform (KMP) del icónico Windows 95. Combina prácticas modernas de desarrollo con una interfaz nostálgica.
