@@ -12,10 +12,11 @@ Este proyecto es una implementación con Kotlin Multiplatform (KMP) del icónico
 
 ----------
 
-## Aprende a PROGRAMAR aplicaciones en Kotlin Multiplataforma.
+## Aprende a PROGRAMAR aplicaciones en Kotlin Multiplataforma
 
-Temario: 
+Temario:
 <br />
+
 - [Capítulo 1 - Configuración del proyecto](https://www.youtube.com/watch?v=QFPTUwFW9p8&t=160s)
 - [Capítulo 2 - Preparando el Splash](https://www.youtube.com/watch?v=QFPTUwFW9p8&t=545s)
 - [Capítulo 3 - Tipografía](https://www.youtube.com/watch?v=QFPTUwFW9p8&t=1585s)
@@ -27,43 +28,41 @@ Temario:
 - [Capítulo 9 - Ordenar carpetas](https://www.youtube.com/watch?v=QFPTUwFW9p8&t=18706s)
 - [Capítulo 10 - Retoques finales](https://www.youtube.com/watch?v=QFPTUwFW9p8&t=19566s)
 
-
 ----------
 
 ## 🛠 Instalación
 
 ### Requisitos
 
--   **Kotlin 2.0.21+**
--   **Compose Multiplatform 1.7.0+**
--   **IDE compatible con KMP**: Fleet o Android Studio.
--   Conocimientos básicos de Kotlin y KMP.
+- **Kotlin 2.0.21+**
+- **Compose Multiplatform 1.7.0+**
+- **IDE compatible con KMP**: Fleet o Android Studio.
+- Conocimientos básicos de Kotlin y KMP.
 
 ### Configuración
 
-1.  Clona este repositorio:
+1. Clona este repositorio:
 
     ```bash
-    git clone https://github.com/ArisGuimera/kmp-windows95.git
-    
+    git clone https://github.com/ArisGuimera/Windows95KMP.git
     ```
 
-2.  Abre el proyecto en Android Studio o Fleet.
-3.  Sincroniza el proyecto Gradle para descargar las dependencias.
+2. Abre el proyecto en Android Studio o Fleet.
+3. Sincroniza el proyecto Gradle para descargar las dependencias.
 
-## Imágenes del proyecto.
+## Imágenes del proyecto
 
-|                               Pantalla principal                               | 
+|                               Pantalla principal                               |
 |:------------------------------------------------------------------------------:|
-|  <img src="img/win95-1.png" style="height: 50%; width:70%;"/>  | 
+|  <img src="img/win95-1.png" style="height: 50%; width:70%;"/>  |
 
-|                               Menú inferior                               | 
+|                               Menú inferior                               |
 |:------------------------------------------------------------------------------:|
-|  <img src="img/win95-2.png" style="height: 50%; width:70%;"/>  | 
+|  <img src="img/win95-2.png" style="height: 50%; width:70%;"/>  |
 
-|                               Click derecho                               | 
+|                               Click derecho                               |
 |:------------------------------------------------------------------------------:|
-|  <img src="img/win95-3.png" style="height: 50%; width:70%;"/>  | 
+|  <img src="img/win95-3.png" style="height: 50%; width:70%;"/>  |
 
 ----------
 
@@ -90,7 +89,7 @@ Desde `ComposeApp/src/desktopMain/kotlin/com/aristidevs/myWindows95/helper` disp
 
 ### Extensions
 
-En `ComposeApp/src/desktopMain/kotlin/com/aristidevs/myWindows95/extensions` tendrás todas las funciones de extensión generadas para el proyecto. 
+En `ComposeApp/src/desktopMain/kotlin/com/aristidevs/myWindows95/extensions` tendrás todas las funciones de extensión generadas para el proyecto.
 
 ```kotlin
 
@@ -120,12 +119,11 @@ Primera vista del proyecto que se lanzará siempre que se ejecute la app. `Compo
 
 Vista principal del proyecto `ComposeApp/src/desktopMain/kotlin/com/aristidevs/myWindows95/windows95`.
 
-
 ## 🌍 Plataformas Soportadas
 
--   **Windows**
--   **MacOS**
--   **Linux**
+- **Windows**
+- **MacOS**
+- **Linux**
 
 ----------
 
@@ -145,14 +143,13 @@ Si quieres apoyar mi trabajo puedes hacerlo a través de los siguientes medios:
 
 Desarrollado por **AristiDevs**.
 
--   [YouTube](https://www.youtube.com/@ArisGuimera)
--   [Twitter](https://twitter.com/ArisGuimera)
--   [LinkedIn](https://www.linkedin.com/in/arisguimera/)
+- [YouTube](https://www.youtube.com/@ArisGuimera)
+- [Twitter](https://twitter.com/ArisGuimera)
+- [LinkedIn](https://www.linkedin.com/in/arisguimera/)
 
 ----------
 
 ## 🚀 AppCademy.dev
-
 
 <p align="center">
 <a href="https://appcademy.dev"><img src="img/appcademy.webp" style="height: 35%; width:35%;"/></center></a></p>
@@ -181,13 +178,13 @@ Si te gustó este proyecto, no olvides echar un vistazo a otros repositorios:
 </p>
 <p>Aprende a programar aplicaciones <strong>Android con Kotlin desde cero</strong> - En este curso aprenderás todo lo necesario ya que no es necesario ningún conocimiento previo. Curso <strong>GRATUITO de 12 horas</strong> con todo el código disponible para descargar.</p>
 </div>
-                                                                                      
+
 </td>
 
 <td width="50%">
                <br>
 <h3 align="center">Arquitectura MVVM</h3>
-<div align="center">                                       
+<div align="center">
 <a href="https://github.com/ArisGuimera/SimpleAndroidMVVM" target="_blank"><img src="https://i.imgur.com/7uCBigG.jpg" width="400" alt="Curso arquitectura MVVM"></a>
 <br>
 <p>
@@ -199,8 +196,8 @@ Si te gustó este proyecto, no olvides echar un vistazo a otros repositorios:
 </a>
 </p>
 </p>Las arquitecturas son <strong>IMPRESCINDIBLES</strong> para poder trabajar como desarrollador/a Android. En este curso, divido por ramas irás aprendiendo a implementar una arquitectura real y robusta con inyección de dependencias, clean architecture, testing y mucho más.</p>
-</div>                                                             
-</table>                                                                                 
+</div>
+</table>
 </div>
 <br>
 
@@ -220,8 +217,8 @@ Si te gustó este proyecto, no olvides echar un vistazo a otros repositorios:
 </p>
 <p>Aprende a programar aplicaciones <strong>Android con Kotlin nivel intermedio</strong> - En este curso nos centraremos en las <strong>buenas prácticas, arquitectura y testing</strong>. Curso <strong>GRATUITO de 8 horas</strong> con todo el código disponible para descargar.</p>
 </div>
-                                                                                      
-</td>       
+
+</td>
 
 <td width="50%">
 <h3 align="center">Curso Kotlin Multiplatform</h3>
@@ -237,8 +234,8 @@ Si te gustó este proyecto, no olvides echar un vistazo a otros repositorios:
 </p>
 <p>Aprende a programar aplicaciones <strong>multiplataform con Kotlin y Jetpack Compose</strong> - En este curso nos centraremos en dominar Kotlin Multiplatform <strong>desde cero</strong>. Curso <strong>GRATUITO</strong> (en desarrollo) con todo el código disponible para descargar.</p>
 </div>
-                                                                                      
+
 </td>  
-</table>                                                                                 
+</table>
 </div>
 <br>

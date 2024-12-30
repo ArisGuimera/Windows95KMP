@@ -14,7 +14,8 @@ This project is a Kotlin Multiplatform (KMP) implementation of the iconic Window
 
 ## Learn to DEVELOP multiplatform applications with Kotlin
 
-### Course Content:
+### Course Content
+
 <br />
 
 - [Chapter 1 - Project Setup](https://www.youtube.com/watch?v=QFPTUwFW9p8&t=160s)
@@ -34,17 +35,17 @@ This project is a Kotlin Multiplatform (KMP) implementation of the iconic Window
 
 ### Requirements
 
--   **Kotlin 2.0.21+**
--   **Compose Multiplatform 1.7.0+**
--   **KMP-compatible IDE**: Fleet or Android Studio.
--   Basic knowledge of Kotlin and KMP.
+- **Kotlin 2.0.21+**
+- **Compose Multiplatform 1.7.0+**
+- **KMP-compatible IDE**: Fleet or Android Studio.
+- Basic knowledge of Kotlin and KMP.
 
 ### Setup
 
 1. Clone this repository:
 
     ```bash
-    git clone https://github.com/ArisGuimera/kmp-windows95.git
+    git clone https://github.com/ArisGuimera/Windows95KMP.git
     ```
 
 2. Open the project in Android Studio or Fleet.
@@ -54,17 +55,17 @@ This project is a Kotlin Multiplatform (KMP) implementation of the iconic Window
 
 ## Project Images
 
-|                               Main Screen                               | 
+|                               Main Screen                               |
 |:------------------------------------------------------------------------:|
-|  <img src="img/win95-1.png" style="height: 50%; width:70%;"/>  | 
+|  <img src="img/win95-1.png" style="height: 50%; width:70%;"/>  |
 
-|                               Bottom Menu                               | 
+|                               Bottom Menu                               |
 |:------------------------------------------------------------------------:|
-|  <img src="img/win95-2.png" style="height: 50%; width:70%;"/>  | 
+|  <img src="img/win95-2.png" style="height: 50%; width:70%;"/>  |
 
-|                               Right-Click Menu                               | 
+|                               Right-Click Menu                               |
 |:------------------------------------------------------------------------:|
-|  <img src="img/win95-3.png" style="height: 50%; width:70%;"/>  | 
+|  <img src="img/win95-3.png" style="height: 50%; width:70%;"/>  |
 
 ----------
 
@@ -118,9 +119,9 @@ The main screen of the project: `ComposeApp/src/desktopMain/kotlin/com/aristidev
 
 ## 🌍 Supported Platforms
 
--   **Windows**
--   **MacOS**
--   **Linux**
+- **Windows**
+- **MacOS**
+- **Linux**
 
 ----------
 
@@ -140,9 +141,9 @@ Every contribution is welcome and helps me continue creating content and open-so
 
 Developed by **AristiDevs**.
 
--   [YouTube](https://www.youtube.com/@ArisGuimera)
--   [Twitter](https://twitter.com/ArisGuimera)
--   [LinkedIn](https://www.linkedin.com/in/arisguimera/)
+- [YouTube](https://www.youtube.com/@ArisGuimera)
+- [Twitter](https://twitter.com/ArisGuimera)
+- [LinkedIn](https://www.linkedin.com/in/arisguimera/)
 
 ----------
 
